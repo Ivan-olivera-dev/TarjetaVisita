@@ -303,12 +303,12 @@ export function HeroCard3D({
             <div className="border-t border-white/10 pt-3 flex items-center justify-between text-xs font-mono text-neutral-400">
               <span>Yuvod · Systems & Backend</span>
               <a
-                href={AUTHORIZED_PROFILE.portfolioUrl}
+                href={AUTHORIZED_PROFILE.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1 font-medium transition-colors"
               >
-                <span>ivanolivera.dev</span>
+                <span>github.com/Ivan-olivera-dev</span>
                 <ArrowUpRight size={13} />
               </a>
             </div>

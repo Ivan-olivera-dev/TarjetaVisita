@@ -39,9 +39,9 @@ export const DynamicScrollSection: React.FC<DynamicScrollSectionProps> = ({
 
   const handlePortfolioClick = () => {
     trackEvent('social_click', {
-      network: 'portfolio',
-      target: 'portfolio',
-      url: AUTHORIZED_PROFILE.portfolioUrl,
+      network: 'github',
+      target: 'github',
+      url: AUTHORIZED_PROFILE.githubUrl,
     });
   };
 
@@ -145,20 +145,20 @@ export const DynamicScrollSection: React.FC<DynamicScrollSectionProps> = ({
           </div>
         </div>
 
-        {/* Full Portfolio CTA */}
+        {/* GitHub Repositories CTA */}
         <a
-          href={AUTHORIZED_PROFILE.portfolioUrl}
+          href={AUTHORIZED_PROFILE.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
           onClick={handlePortfolioClick}
-          aria-label={isEs ? 'Ver portfolio completo en ivanolivera.dev' : 'View full portfolio at ivanolivera.dev'}
+          aria-label={isEs ? 'Ver proyectos en GitHub' : 'View projects on GitHub'}
           className="group/cta w-full min-h-[44px] py-3 px-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-white/10 hover:border-emerald-500/40 flex items-center justify-between text-xs font-medium text-white transition-all duration-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
         >
           <span className="text-neutral-300 group-hover/cta:text-white">
-            {isEs ? 'Explorar casos y certificados' : 'Explore full case studies & certs'}
+            {isEs ? 'Explorar repositorios y proyectos' : 'Explore repositories & projects'}
           </span>
           <span className="inline-flex items-center gap-1 font-mono text-emerald-400 group-hover/cta:translate-x-0.5 transition-transform">
-            <span>ivanolivera.dev</span>
+            <span>github.com</span>
             <ArrowUpRight size={14} />
           </span>
         </a>

@@ -19,9 +19,9 @@ describe('DynamicScrollSection Component (Full-Screen 3D Snap Scroll)', () => {
     expect(screen.getByText(/HP CodeWars/i)).toBeInTheDocument();
     expect(screen.getByText(/DAW \(CEEDCV\) & SMR \(IES El Grao\)/i)).toBeInTheDocument();
     expect(screen.getByText(/AWS & Cisco CCNA 1/i)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /ivanolivera\.dev/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute(
       'href',
-      AUTHORIZED_PROFILE.portfolioUrl
+      AUTHORIZED_PROFILE.githubUrl
     );
 
     expect(containsEmoji(document.body.textContent || '')).toBe(false);
@@ -34,17 +34,17 @@ describe('DynamicScrollSection Component (Full-Screen 3D Snap Scroll)', () => {
     expect(containsEmoji(document.body.textContent || '')).toBe(false);
   });
 
-  it('tracks social_click event when clicking the portfolio link', () => {
+  it('tracks social_click event when clicking the github link', () => {
     const trackSpy = vi.spyOn(analytics, 'trackEvent');
     render(<DynamicScrollSection language="es" />);
 
-    const link = screen.getByRole('link', { name: /ivanolivera\.dev/i });
+    const link = screen.getByRole('link', { name: /github/i });
     fireEvent.click(link);
 
     expect(trackSpy).toHaveBeenCalledWith('social_click', {
-      network: 'portfolio',
-      target: 'portfolio',
-      url: AUTHORIZED_PROFILE.portfolioUrl,
+      network: 'github',
+      target: 'github',
+      url: AUTHORIZED_PROFILE.githubUrl,
     });
   });
 });

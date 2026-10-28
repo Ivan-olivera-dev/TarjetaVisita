@@ -310,7 +310,7 @@ describe('App End-to-End Integration Suite (CA-01 to CA-07, RF-001 to RF-014)', 
     expect(screen.getByText('Software Engineer & Systems Administrator')).toBeInTheDocument();
     expect(screen.getByText(/HP CodeWars/i)).toBeInTheDocument();
     expect(screen.getByText(/DAW \(CEEDCV\) & SMR \(IES El Grao\)/i)).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /ivanolivera\.dev/i }).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByRole('link', { name: /github/i }).length).toBeGreaterThanOrEqual(1);
   });
 
   it('CA-06: detects ?ref=nfc once per session and opens QrSheet with mailto direct action (RF-006, RF-012)', async () => {
