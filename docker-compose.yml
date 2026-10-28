@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  card:
+    build: .
+    container_name: io_card
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    # Si tienes un Nginx Proxy Manager o Traefik, puedes quitar el 'ports' y conectarlo a su red

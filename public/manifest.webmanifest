@@ -1,0 +1,19 @@
+{
+  "name": "Iván Olivera — Business Card",
+  "short_name": "Iván Olivera",
+  "description": "Interactive digital business card of Iván Olivera González — Software Engineer & Systems Specialist in Valencia, España.",
+  "start_url": "/?ref=nfc",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/logo-io.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
